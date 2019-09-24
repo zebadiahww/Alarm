@@ -34,6 +34,7 @@ class SwitchTableViewCell: UITableViewCell {
     //Actions
     @IBAction func alarmSwitch(_ sender: Any) {
         delegate?.enabledValueChanged(self, selected: alarmSwitch.isOn)
+        AlarmController.shared.saveToPersistentStore()
     }
 
     func updateViews() {
